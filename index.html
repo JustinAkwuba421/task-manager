@@ -32,8 +32,27 @@
     <section class="tasks-section" aria-labelledby="tasks-heading">
       <div class="tasks-heading">
         <h2 id="tasks-heading">Your tasks</h2>
-        <span class="task-count" id="task-count">0 left</span>
+        <span class="task-count" id="task-count" aria-live="polite">0 left</span>
       </div>
+
+      <div class="task-toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="filter-button" type="button" data-filter="active" aria-pressed="false">
+            Active
+          </button>
+          <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">
+            Completed
+          </button>
+        </div>
+
+        <button class="clear-button" id="clear-completed" type="button">
+          Clear completed
+        </button>
+      </div>
+
       <ul class="task-list" id="task-list" aria-live="polite"></ul>
     </section>
   </main>
