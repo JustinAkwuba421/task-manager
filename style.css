@@ -159,11 +159,24 @@
     flex: 1;
     overflow-wrap: anywhere;
     line-height: 1.5;
+    cursor: text;
   }
   
   .task-item.completed .task-text {
     color: #98a1b1;
     text-decoration: line-through;
+  }
+  
+  .task-edit-input {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+    border: 1px solid #6875e5;
+    border-radius: 6px;
+    outline: none;
+    color: #172033;
+    font: inherit;
+    box-shadow: 0 0 0 3px rgb(104 117 229 / 15%);
   }
   
   .delete-button {
