@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="eyebrow">YOUR DAY, ORGANIZED</p>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Keep track of what you need to get done.</p>
+    </header>
+
+    <form class="task-form" id="task-form">
+      <label class="sr-only" for="task-input">New task</label>
+      <input
+        id="task-input"
+        name="task"
+        type="text"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+        required
+      >
+      <button type="submit">Add Task</button>
+    </form>
+
+    <section class="tasks-section" aria-labelledby="tasks-heading">
+      <div class="tasks-heading">
+        <h2 id="tasks-heading">Your tasks</h2>
+        <span class="task-count" id="task-count">0 tasks</span>
+      </div>
+      <ul class="task-list" id="task-list" aria-live="polite"></ul>
+    </section>
+  </main>
+</body>
+</html>
